@@ -3,14 +3,20 @@ import {
   AppRegistry,
   StyleSheet,
   Text,
-  View
+  View,
+  ScrollView
 } from 'react-native';
 
+import Book from './src/Book'
+
 export default class Inkitt extends Component {
+
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.title}>Chapter 2</Text>
+        <ScrollView>
+          <Book />
+        </ScrollView>
       </View>
     );
   }
@@ -19,13 +25,10 @@ export default class Inkitt extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
+    justifyContent: 'flex-start',
     alignItems: 'center',
+    padding: 10,
     backgroundColor: '#F5FCFF',
-  },
-  title: {
-    fontSize: 20,
-    color: "#CCCCCC",
   }
 });
 
